@@ -1,4 +1,4 @@
-const numberOfFilms = prompt("Сколько фильмов вы уже посмотрели?");
+const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?");
 
 if (numberOfFilms < 10) {
   alert("Просмотрено довольно мало фильмов");
@@ -6,6 +6,8 @@ if (numberOfFilms < 10) {
   alert("Вы классический зритель");
 } else if (numberOfFilms > 30) {
   alert("Вы киноман");
+} else {
+  alert("Произошла ошибка");
 }
 
 const personalMovieDB = {
