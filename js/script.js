@@ -26,13 +26,15 @@ const personalMovieDB = {
 
 function rememberMyFilms() {
   for (let i = 0; i < 2; i++) {
-    const firstFilm = prompt('Один из просмотренных фильмов?');
+    const firstFilm = prompt('Один из просмотренных фильмов?').trim();
     const ratingFirstFilm = prompt('На сколько вы его оцените?');
     if (firstFilm.length && ratingFirstFilm.length && firstFilm.length < 50) {
       personalMovieDB.movies[firstFilm] = ratingFirstFilm;
+      console.log('Done.');
     
     } else {
       i--;
+      console.log('Error');
     }
     }
 }
